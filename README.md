@@ -11,11 +11,13 @@
 <!--toc:end-->
 
 ### create nginx configuration 
-```sudo vim /etc/nginx/sites-available/<site-name>
+```
+sudo vim /etc/nginx/sites-available/<site-name>
 ```
 
 ### add the following configuration
-```server {
+```
+server {
   listen 80;
   server_name <site-name>-backend.amalitech-dev.net;
   
@@ -29,17 +31,20 @@
 ```
 
 ### enable site (creating a symbolic link)
-```sudo ln -s /etc/nginx/sites-available/<site-name> /etc/nginx/sites-enabled/
+```
+sudo ln -s /etc/nginx/sites-available/<site-name> /etc/nginx/sites-enabled/
 ```
 
 ### test nginx configuration
-```sudo nginx -t
+```
+sudo nginx -t
 ```
 
 ### reload nginx
-```sudo systemctl reload nginx
 ```
-tbot
+sudo systemctl reload nginx
+```
 ### obtain ssl certificate with certbot
-```sudo certbot --nginx
+```
+sudo certbot --nginx
 ```
